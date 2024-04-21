@@ -3,8 +3,8 @@
 using namespace std;
 
 //DO NOT CHANGE THIS PART
-typedef int TElem;
-#define NULL_TELEM -11111
+typedef pair<int , int> TElem;
+#define NULL_TELEM make_pair(-11111, -11111)
 
 class Queue
 {

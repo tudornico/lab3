@@ -70,7 +70,7 @@ int Queue::searchFirstEmpty() {
 void Queue::resizeUp() {
     if(this->nrOfplaces >= this->capacity-2){
         this->capacity *=2;
-        TElem *auxValueList = new TElem [this->capacity];
+        auto *auxValueList = new TElem [this->capacity];
         int *auxBeforeList = new int [this->capacity];
         int *auxNextList = new int[this->capacity];
         for(int parser = 0 ; parser<this->nrOfplaces; parser++)
