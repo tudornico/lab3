@@ -41,6 +41,38 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/tudor/CLionProjects/lab3/cmake-build-debug/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target queue1
+
+
+#############################################
+# Order-only phony target for queue1
+
+build cmake_object_order_depends_target_queue1: phony || CMakeFiles/queue1.dir
+
+build CMakeFiles/queue1.dir/Queue.cpp.obj: CXX_COMPILER__queue1_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/Queue.cpp || cmake_object_order_depends_target_queue1
+  DEFINES = -DDEFINITION
+  DEP_FILE = CMakeFiles\queue1.dir\Queue.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always   1
+  OBJECT_DIR = CMakeFiles\queue1.dir
+  OBJECT_FILE_DIR = CMakeFiles\queue1.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target queue1
+
+
+#############################################
+# Link the static library libqueue1.a
+
+build libqueue1.a: CXX_STATIC_LIBRARY_LINKER__queue1_Debug CMakeFiles/queue1.dir/Queue.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles\queue1.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libqueue1.a
+  TARGET_PDB = queue1.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target lab3
 
 
@@ -49,39 +81,17 @@ cmake_ninja_workdir = C$:/Users/tudor/CLionProjects/lab3/cmake-build-debug/
 
 build cmake_object_order_depends_target_lab3: phony || CMakeFiles/lab3.dir
 
-build CMakeFiles/lab3.dir/main.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/main.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir
-
-build CMakeFiles/lab3.dir/ExtendedTest.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/ExtendedTest.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\ExtendedTest.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir
-
-build CMakeFiles/lab3.dir/Queue.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/Queue.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\Queue.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir
-
-build CMakeFiles/lab3.dir/ShortTest.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/ShortTest.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\ShortTest.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir
-
 build CMakeFiles/lab3.dir/App.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/App.cpp || cmake_object_order_depends_target_lab3
+  DEFINES = -DDEFINITION
   DEP_FILE = CMakeFiles\lab3.dir\App.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always   1
   OBJECT_DIR = CMakeFiles\lab3.dir
   OBJECT_FILE_DIR = CMakeFiles\lab3.dir
 
 build CMakeFiles/lab3.dir/MazeSolver.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/MazeSolver.cpp || cmake_object_order_depends_target_lab3
+  DEFINES = -DDEFINITION
   DEP_FILE = CMakeFiles\lab3.dir\MazeSolver.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always   1
   OBJECT_DIR = CMakeFiles\lab3.dir
   OBJECT_FILE_DIR = CMakeFiles\lab3.dir
 
@@ -93,7 +103,7 @@ build CMakeFiles/lab3.dir/MazeSolver.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug
 #############################################
 # Link the executable lab3.exe
 
-build lab3.exe: CXX_EXECUTABLE_LINKER__lab3_Debug CMakeFiles/lab3.dir/main.cpp.obj CMakeFiles/lab3.dir/ExtendedTest.cpp.obj CMakeFiles/lab3.dir/Queue.cpp.obj CMakeFiles/lab3.dir/ShortTest.cpp.obj CMakeFiles/lab3.dir/App.cpp.obj CMakeFiles/lab3.dir/MazeSolver.cpp.obj
+build lab3.exe: CXX_EXECUTABLE_LINKER__lab3_Debug CMakeFiles/lab3.dir/App.cpp.obj CMakeFiles/lab3.dir/MazeSolver.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab3.dir
@@ -102,6 +112,54 @@ build lab3.exe: CXX_EXECUTABLE_LINKER__lab3_Debug CMakeFiles/lab3.dir/main.cpp.o
   TARGET_FILE = lab3.exe
   TARGET_IMPLIB = liblab3.dll.a
   TARGET_PDB = lab3.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test
+
+
+#############################################
+# Order-only phony target for test
+
+build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_queue1
+
+build CMakeFiles/test.dir/TestMain.cpp.obj: CXX_COMPILER__test_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/TestMain.cpp || cmake_object_order_depends_target_test
+  DEFINES = -DDEFINITION
+  DEP_FILE = CMakeFiles\test.dir\TestMain.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always   1
+  OBJECT_DIR = CMakeFiles\test.dir
+  OBJECT_FILE_DIR = CMakeFiles\test.dir
+
+build CMakeFiles/test.dir/ExtendedTest.cpp.obj: CXX_COMPILER__test_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/ExtendedTest.cpp || cmake_object_order_depends_target_test
+  DEFINES = -DDEFINITION
+  DEP_FILE = CMakeFiles\test.dir\ExtendedTest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always   1
+  OBJECT_DIR = CMakeFiles\test.dir
+  OBJECT_FILE_DIR = CMakeFiles\test.dir
+
+build CMakeFiles/test.dir/ShortTest.cpp.obj: CXX_COMPILER__test_unscanned_Debug C$:/Users/tudor/CLionProjects/lab3/ShortTest.cpp || cmake_object_order_depends_target_test
+  DEFINES = -DDEFINITION
+  DEP_FILE = CMakeFiles\test.dir\ShortTest.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always   1
+  OBJECT_DIR = CMakeFiles\test.dir
+  OBJECT_FILE_DIR = CMakeFiles\test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test
+
+
+#############################################
+# Link the executable test.exe
+
+build test.exe: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/TestMain.cpp.obj CMakeFiles/test.dir/ExtendedTest.cpp.obj CMakeFiles/test.dir/ShortTest.cpp.obj | libqueue1.a || libqueue1.a
+  FLAGS = -g
+  LINK_LIBRARIES = -llab3  libqueue1.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = test.exe
+  TARGET_IMPLIB = libtest.dll.a
+  TARGET_PDB = test.exe.dbg
 
 
 #############################################
@@ -131,6 +189,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build lab3: phony lab3.exe
 
+build queue1: phony libqueue1.a
+
+build test: phony test.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -139,7 +201,7 @@ build lab3: phony lab3.exe
 #############################################
 # Folder: C:/Users/tudor/CLionProjects/lab3/cmake-build-debug
 
-build all: phony lab3.exe
+build all: phony libqueue1.a lab3.exe test.exe
 
 # =============================================================================
 # Built-in targets

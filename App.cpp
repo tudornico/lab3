@@ -1,14 +1,10 @@
-#include "Queue.h"
-#include "ExtendedTest.h"
-#include "ShortTest.h"
+
 #include <iostream>
 #include "MazeSolver.h"
 using namespace std;
-
 int main() {
 
-//	testAll();
-//	testAllExtended();
+
     int maze[100][100] = {
             {0, 1, 0, 0, 0},
             {0, 1, 1, 1, 0},

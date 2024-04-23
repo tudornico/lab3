@@ -1,6 +1,7 @@
 
 #include "Queue.h"
 #pragma once
+
 class MazeSolver {
 
 private:

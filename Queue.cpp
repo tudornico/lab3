@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 Queue::Queue() {
 	this->valueList = new TElem [5];
     this->nextList = new int[5];
@@ -14,6 +13,7 @@ Queue::Queue() {
     this->head = -1;
     this->tail = -1;
     this->nrOfplaces = 0;
+    this->firstEmptyIndex = 0;
 }
 
 // we always push at the end of the list
@@ -61,7 +61,7 @@ void Queue::push(TElem elem) {
 
 int Queue::searchFirstEmpty() {
     for(int parser = 0 ; parser< this->length ; parser++){
-        if( this->valueList[parser] == NULL_TELEM){
+        if( this->valueList[parser] == NULL_TELEM ){
             return parser;
         }
     }
@@ -139,4 +139,5 @@ Queue::~Queue() {
     delete[] this->nextList;
     delete[] this->beforeList;
 }
+
 

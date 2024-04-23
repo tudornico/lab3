@@ -3,8 +3,15 @@
 using namespace std;
 
 //DO NOT CHANGE THIS PART
-typedef pair<int , int> TElem;
-#define NULL_TELEM make_pair(-11111, -11111)
+#if DEFINITION == 1
+typedef pair<int, int> TElem;
+#define NULL_TELEM make_pair(-11111 , -11111)
+#else
+typedef int TElem;
+#define NULL_TELEM (-11111)
+#endif
+
+
 
 class Queue
 {
